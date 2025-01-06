@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Hours Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 400px;
+            width: 100%;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff7e5f;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #feb47b;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Office Hours Calculator</h1>
+    <form id="office-hours-form">
+        <label for="start-time">Start Time (AM/PM):</label>
+        <input type="text" id="start-time" required><br><br>
+        
+        <label for="end-time">End Time (AM/PM):</label>
+        <input type="text" id="end-time" required><br><br>
+        
+        <button type="button" onclick="calculateOfficeHours()">Calculate Office Hours</button>
+    </form>
+    
+    <h2>Office Hours: <span id="result"></span></h2>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#start-time", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "h:i K",
+            time_24hr: false
+        });
+
+        flatpickr("#end-time", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "h:i K",
+            time_24hr: false
+        });
+
+        function calculateOfficeHours() {
+            const startTime = document.getElementById('start-time').value;
+            const endTime = document.getElementById('end-time').value;
+            
+            if (!startTime || !endTime) {
+                alert("Please enter both start and end times.");
+                return;
+            }
+
+            const start = convertTo24Hour(startTime);
+            const end = convertTo24Hour(endTime);
+
+            let diff = (end - start) / 1000 / 60 / 60;
+
+            if (diff < 0) {
+                diff += 24;
+            }
+
+            document.getElementById('result').innerText = diff.toFixed(2) + " hours";
+        }
+
+        function convertTo24Hour(time) {
+            const [hourMinute, period] = time.split(" ");
+            let [hour, minute] = hourMinute.split(":");
+
+            hour = parseInt(hour);
+            minute = parseInt(minute);
+
+            if (period === "AM" && hour === 12) {
+                hour = 0;
+            } else if (period === "PM" && hour < 12) {
+                hour += 12;
+            }
+
+            return new Date(`1970-01-01T${hour}:${minute}:00Z`);
+        }
+    </script>
+</body>
+</html>
