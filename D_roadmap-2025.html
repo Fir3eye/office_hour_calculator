@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Roadmap 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .roadmap {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+            display: none; /* Initially hidden */
+        }
+        .section ul li {
+            background: #e9ecef;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .completed-status {
+            font-size: 0.9em;
+            color: green;
+            font-weight: bold;
+        }
+        .score {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="roadmap">
+        <h1>DevOps Roadmap 2025</h1>
+
+        <div class="section">
+            <h2 onclick="toggleSection('aws-section')">AWS</h2>
+            <ul id="aws-section">
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> IAM and Security Management <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> VPC Networking <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> EC2 and Elastic Load Balancing <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> S3 and CloudFront <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> RDS and DynamoDB <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> AWS Lambda and Serverless Framework <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> CloudFormation and CDK <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> AWS Monitoring and Logging (CloudWatch, X-Ray) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> AWS CLI and SDK <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> AWS DevOps Tools (CodePipeline, CodeDeploy, CodeBuild) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> Elastic Beanstalk <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> AWS Fargate <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> Amazon EKS (Elastic Kubernetes Service) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> Amazon SQS (Simple Queue Service) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> Amazon SNS (Simple Notification Service) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> Amazon CloudWatch Logs Insights <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> AWS Auto Scaling <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> AWS CodeStar <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> AWS Secrets Manager <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('aws-section')"> AWS Kinesis <span class="completed-status"></span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection('linux-section')">Linux</h2>
+            <ul id="linux-section">
+                <li><input type="checkbox" onclick="updateStatus('linux-section')"> Linux Fundamentals and Commands <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('linux-section')"> File Systems and Disk Management <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('linux-section')"> User Management and Permissions <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('linux-section')"> Networking and Security <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('linux-section')"> System Monitoring and Performance Tuning <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('linux-section')"> Shell Scripting <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('linux-section')"> Package Management (APT, YUM) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('linux-section')"> Linux Services and Daemons <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('linux-section')"> Log Management <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('linux-section')"> Linux Containers (LXC) <span class="completed-status"></span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection('docker-section')">Docker</h2>
+            <ul id="docker-section">
+                <li><input type="checkbox" onclick="updateStatus('docker-section')"> Docker Basics and Installation <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('docker-section')"> Docker Images and Containers <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('docker-section')"> Docker Networking <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('docker-section')"> Docker Volumes and Storage <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('docker-section')"> Docker Compose <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('docker-section')"> Docker Registry (Docker Hub, Private Registries) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('docker-section')"> Docker Swarm <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('docker-section')"> Docker Security Best Practices <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('docker-section')"> CI/CD Integration with Docker <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('docker-section')"> Monitoring Docker Containers <span class="completed-status"></span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection('kubernetes-section')">Kubernetes</h2>
+            <ul id="kubernetes-section">
+                <li><input type="checkbox" onclick="updateStatus('kubernetes-section')"> Kubernetes Architecture <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('kubernetes-section')"> Installation and Configuration (Minikube, kubeadm, Managed Services) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('kubernetes-section')"> Kubernetes Networking <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('kubernetes-section')"> Deployments and StatefulSets <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('kubernetes-section')"> Persistent Storage (Volumes, PersistentVolumeClaims) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('kubernetes-section')"> ConfigMaps and Secrets <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('kubernetes-section')"> Kubernetes Services and Ingress <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('kubernetes-section')"> Helm Charts <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('kubernetes-section')"> Monitoring and Logging (Prometheus, Grafana) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('kubernetes-section')"> Kubernetes Security and RBAC <span class="completed-status"></span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection('ansible-section')">Ansible</h2>
+            <ul id="ansible-section">
+                <li><input type="checkbox" onclick="updateStatus('ansible-section')"> Ansible Basics and Installation <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('ansible-section')"> Playbooks and Roles <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('ansible-section')"> Ansible Variables and Templates <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('ansible-section')"> Ansible Inventory and Dynamic Inventory <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('ansible-section')"> Ansible Collections <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('ansible-section')"> Ansible Vault for Secrets Management <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('ansible-section')"> Ansible Tower <span class="completed-status"></span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection('jenkins-section')">Jenkins</h2>
+            <ul id="jenkins-section">
+                <li><input type="checkbox" onclick="updateStatus('jenkins-section')"> Jenkins Basics and Installation <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('jenkins-section')"> Jenkins Pipelines (Declarative and Scripted) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('jenkins-section')"> Jenkins Integration with Docker and Kubernetes <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('jenkins-section')"> Jenkins CI/CD Practices <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('jenkins-section')"> Jenkins Plugins <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('jenkins-section')"> Jenkins Security and Best Practices <span class="completed-status"></span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection('terraform-section')">Terraform</h2>
+            <ul id="terraform-section">
+                <li><input type="checkbox" onclick="updateStatus('terraform-section')"> Terraform Basics and Installation <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('terraform-section')"> Terraform Configuration Files (HCL) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('terraform-section')"> Terraform Modules <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('terraform-section')"> Terraform Providers <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('terraform-section')"> Terraform State Management <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('terraform-section')"> Terraform Workspaces <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('terraform-section')"> Terraform Cloud <span class="completed-status"></span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection('prometheus-section')">Prometheus & Grafana</h2>
+            <ul id="prometheus-section">
+                <li><input type="checkbox" onclick="updateStatus('prometheus-section')"> Prometheus Basics and Setup <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('prometheus-section')"> Prometheus Query Language (PromQL) <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('prometheus-section')"> Grafana Integration with Prometheus <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('prometheus-section')"> Grafana Dashboards <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('prometheus-section')"> Alerting in Prometheus and Grafana <span class="completed-status"></span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection('networking-section')">Networking</h2>
+            <ul id="networking-section">
+                <li><input type="checkbox" onclick="updateStatus('networking-section')"> OSI Model and Networking Basics <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('networking-section')"> TCP/IP Stack and Protocols <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('networking-section')"> Subnetting and IP Addressing <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('networking-section')"> DNS and DHCP <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('networking-section')"> Load Balancing and Reverse Proxy <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('networking-section')"> VPN and Security <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('networking-section')"> Firewall and NAT <span class="completed-status"></span></li>
+                <li><input type="checkbox" onclick="updateStatus('networking-section')"> Network Troubleshooting and Monitoring <span class="completed-status"></span></li>
+            </ul>
+        </div>
+
+        <script>
+            function toggleSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section.style.display === "none" || section.style.display === "") {
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
+            }
+
+            function updateStatus(sectionId) {
+                const checkboxes = document.querySelectorAll(`#${sectionId} input[type="checkbox"]`);
+                const completedStatus = document.querySelectorAll(`#${sectionId} .completed-status`);
+                let completedCount = 0;
+
+                checkboxes.forEach((checkbox, index) => {
+                    if (checkbox.checked) {
+                        completedStatus[index].textContent = "(Completed)";
+                        completedStatus[index].style.color = 'green';
+                        completedCount++;
+                    } else {
+                        completedStatus[index].textContent = "";
+                    }
+                });
+
+                const score = (completedCount / checkboxes.length) * 100;
+                document.getElementById(`${sectionId}-score`).textContent = `${sectionId.replace('-section', '').toUpperCase()} Completion: ${score.toFixed(2)}%`;
+            }
+        </script>
+    </div>
+</body>
+</html>
+
